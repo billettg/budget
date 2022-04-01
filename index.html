@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    
+    <head>
+        <title>template</title>
+        <meta charset="UTF-8" />
+        <link rel="shortcut icon" type="image/x-icon" href="res/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+        <div class="header">
+        <h2>Budgetr</h2>
+    </div>
+    <div id="column">
+        <div class="float-child" id="boxChart">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="float-child" spellcheck="false" id="boxAdd">
+            <table id="tableAdd">
+                <tr>
+                    <td class="rightAlign"><label>Name</label></td>
+                    <td><input type="text" id="textName"></input></td>
+                </tr>
+                <tr>
+                    <td class="rightAlign"><label>Amount</label></td>
+                    <td><input type="text" id="textAmount"></input></td>
+                </tr>
+                <tr>
+                    <td class="rightAlign"><label>Type</label></td>
+                    <td>
+                        <input name="radioType" type="radio" id="radioTypeIncome"></input>
+                        <label for="radioTypeIncome">Income</label>
+                        <input name="radioType" type="radio" id="radioTypeExpenditure" checked></input>
+                        <label for="radioTypeExpenditure">Expediture</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rightAlign"><label>Frequency</label></td>
+                    <td>
+                        <input name="radioFrequency" type="radio" id="radioFrequencyMonthly" checked></input>
+                        <label for="radioFrequencyMonthly">Monthly</label>
+                        <input name="radioFrequency" type="radio" id="radioFrequencyYearly"></input>
+                        <label for="radioFrequencyYearly">Yearly</label>
+                    </td>
+                </tr>
+            </table>
+            <button id="buttonAdd" class="bottomRight"><img src="res/addbutton.png" alt="Add"></button>
+        </div>
+        <div class="box">
+            <table id="tableItems">
+                <tr class="t1">
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Monthly</th>
+                    <th>Yearly</th>
+                </tr>
+                <tr class="t3">
+                    <th></th>
+                    <th class="t2" id="tTotalIncome">Total income</th>
+                    <td id="tTotalIncomeValue"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th class="t2" id="tTotalExpenditure">Total expenditure</th>
+                    <td id="tTotalExpenditureValue"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th class="t2" id="tSurplus">Surplus</th>
+                    <td id="tSurplusValue"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="src/main.js"></script>
+</html>
