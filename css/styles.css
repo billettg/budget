@@ -35,13 +35,24 @@ button:hover {
 button:active {
     transform: translateY(1px);
 }
-#boxAdd {
+#boxAdd, #boxChart {
     position: relative;
 }
 .bottomRight {
     position: absolute;
     right: 20px;
     bottom: 20px;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    color:rgb(60,60,60);
+    font-size: 26px;
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
 }
 #tableItems {
     table-layout: fixed;

@@ -39,15 +39,15 @@ function createChart() {
         type: 'doughnut',
         data: data,
         options: {
-            responsive: false,
+            responsive: true,
             plugins: {
-                legend: {
-                    display: false
-                },
+                    legend: {
+                        display: false
+                    },
             }
         }
     };
-    if (myChart) myChart.destroy();
+    if (myChart) { myChart.destroy(); noDataPlaceholder.style.display = "none"; } else { noDataPlaceholder.style.display = "block";}
     myChart = new Chart(document.getElementById('myChart'), config);
 }
 
